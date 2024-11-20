@@ -153,23 +153,21 @@ function ConditionalRendering({ isDone, Task }) {
 
   // 1. Turnari Operator short verstion of if else
 
-  /* <li> {isDone ? 'Finished' : 'Complete The'} : {Task}</li>  */
+  <li> {isDone ? 'Finished' : 'Complete The'} : {Task}</li>
 
 
   // 2. Turnari Operator short verstion of if else with && Operator
 
-  /* <li> {isDone && 'Finished : ' } {Task} </li>  */
+  <li> {isDone && 'Finished : ' } {Task} </li>
 
 
   // 3. Turnari Operator short verstion of if else with || Operator
 
-  /* <li> {isDone || 'Finished : ' } {Task} </li> */
+  <li> {isDone || 'Finished : ' } {Task} </li>
 
 
   // 3. Turnari Operator if else with the use of variable (Let)
 
-  /* 
-  
     let listItem;
 
     if (isDone) {
@@ -180,8 +178,6 @@ function ConditionalRendering({ isDone, Task }) {
     }
 
     return listItem;
-  
-  */
 
 }
 
