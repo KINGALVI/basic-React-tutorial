@@ -169,33 +169,33 @@ function ConditionalRendering({ isDone, Task }) {
 
   // 1. Turnari Operator short verstion of if else
 
-  <li> {isDone ? 'Finished' : 'Complete The'} : {Task}</li>
+  // <li> {isDone ? 'Finished' : 'Complete The'} : {Task}</li>
 
 
   // 2. Turnari Operator short verstion of if else with && Operator
 
-  <li> {isDone && 'Finished : ' } {Task} </li>
+  // <li> {isDone && 'Finished : ' } {Task} </li>
 
 
   // 3. Turnari Operator short verstion of if else with || Operator
 
-   <li> {isDone || 'Finished : ' } {Task} </li>
+  //  <li> {isDone || 'Finished : ' } {Task} </li>
 
 
   // 3. Turnari Operator if else with the use of variable (Let)
 
 
 
-  let listItem;
+  // let listItem;
 
-  if (isDone) {
-    listItem < li > Finished The: { Task }</ >
-    }
-  else {
-    listItem < li > Complete The { Task }</ >
-    }
+  // if (isDone) {
+  //   listItem < li > Finished The: { Task }</ >
+  //   }
+  // else {
+  //   listItem < li > Complete The { Task }</ >
+  //   }
 
-  return listItem;
+  // return listItem;
 
 
 
