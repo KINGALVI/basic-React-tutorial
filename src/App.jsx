@@ -74,6 +74,15 @@ function App() {
         myPlayers.map(player => <Players players={player}></Players>)
       }
 
+
+
+
+
+      <button onClick={eventHandeler1}>FIRST CLCIK</button>
+
+      {/* Example Of Anonymous Function */}
+      <button onClick={() => eventHandeler2(5)}> SECOEND CLICK</button>
+
     </center>
   )
 }
@@ -120,7 +129,7 @@ function Device() {
 
 //// ২। React JS এ Destructure এর মাধ্যমে একই Component একাধিকবার ব্যবহার করে এ বিভিন্ন Data প্রদর্শন করার নিয়ম ।
 
-function Destructure({ Name = 'Not Found' /* Default Data */ , /* Default Data */ Score = '0' }) {
+function Destructure({ Name = 'Not Found' /* Default Data */, /* Default Data */ Score = '0' }) {
   return (
     <center>
       <section className='Destructure'>
@@ -153,21 +162,23 @@ function ConditionalRendering({ isDone, Task }) {
 
   // 1. Turnari Operator short verstion of if else
 
-  <li> {isDone ? 'Finished' : 'Complete The'} : {Task}</li>
+  /* <li> {isDone ? 'Finished' : 'Complete The'} : {Task}</li>  */
 
 
   // 2. Turnari Operator short verstion of if else with && Operator
 
-  <li> {isDone && 'Finished : ' } {Task} </li>
+  /* <li> {isDone && 'Finished : ' } {Task} </li>  */
 
 
   // 3. Turnari Operator short verstion of if else with || Operator
 
-  <li> {isDone || 'Finished : ' } {Task} </li>
+  /* <li> {isDone || 'Finished : ' } {Task} </li> */
 
 
   // 3. Turnari Operator if else with the use of variable (Let)
 
+  /* 
+  
     let listItem;
 
     if (isDone) {
@@ -178,6 +189,8 @@ function ConditionalRendering({ isDone, Task }) {
     }
 
     return listItem;
+  
+  */
 
 }
 
@@ -191,6 +204,7 @@ function ConditionalRendering({ isDone, Task }) {
 
 
 //// ৪। React JS এ map() method এর ব্যবহার ।
+
 
 // 1. frist normal example 
 
@@ -220,6 +234,30 @@ function Players({ players }) {
       <h3> Player Age : {players.age} </h3>
     </section>
   )
+}
+
+
+
+
+
+
+
+
+
+
+//// ৫। React JS এ কোনো Event Handel করার নিয়ম ।
+
+
+// 1. Event Hnadel With Parameter .
+
+function eventHandeler2(Number) {
+  alert(Number + 5);
+}
+
+// 2. Event Handel Without Parameter .
+
+function eventHandeler1() {
+  alert('HELLO KING ALVI !!')
 }
 
 export default App
