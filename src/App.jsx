@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { useState } from 'react';
 import './App.css'
 
 function App() {
@@ -82,6 +83,12 @@ function App() {
 
       {/* Example Of Anonymous Function */}
       <button onClick={() => eventHandeler2(5)}> SECOEND CLICK</button>
+
+
+
+
+
+      <UseState></UseState>
 
     </center>
   )
@@ -260,5 +267,42 @@ function eventHandeler1() {
   alert('HELLO KING ALVI !!')
 }
 
+
+
+
+
+
+
+
+
+
+//// ৬। React JS এ কোনো কিছুর মান যদি Dynamically পরিবর্তন করতে চাই তাহলে আমাদেরকে useState() Method ব্যবহার করতে হবে ।
+
+function UseState() {
+
+  let [count, setCount] = useState(0);
+
+  const handelPlushCount = () => {
+    const newCount = count + 1;
+    setCount(newCount);
+  }
+
+  const handelMinusCount = () => {
+    const newCount = count - 1;
+    setCount(newCount);
+  }
+
+  if (count < 0) {
+    count = 0;
+  }
+
+  return (
+    <section>
+      <h1>Number Count : {count}</h1>
+      <button onClick={handelPlushCount}>Increase Number</button>
+      <button onClick={handelMinusCount}>Decrease Number</button>
+    </section>
+  )
+}
 
 export default App
