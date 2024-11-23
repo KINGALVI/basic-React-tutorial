@@ -296,8 +296,20 @@ function UseState() {
     count = 0;
   }
 
+
+  //Example Of Emplement Style With The Help Of Object Function .
+
+  const countStyle = {
+    border: '2.5px solid purple',
+    width: '25vw',
+    margin: '15px',
+    padding: '15px',
+    borderRadius: '15px'
+  }
+
+
   return (
-    <section>
+    <section style={countStyle}>
       <h1>Number Count : {count}</h1>
       <button onClick={handelPlushCount}>Increase Number</button>
       <button onClick={handelMinusCount}>Decrease Number</button>
