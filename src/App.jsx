@@ -257,7 +257,7 @@ function eventHandeler2(Number) {
 // 2. Event Handel Without Parameter .
 
 function eventHandeler1() {
-  alert('HELLO KING ALVI !!');
+  alert('HELLO KING ALVI !!')
 }
 
 export default App
