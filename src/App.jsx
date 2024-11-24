@@ -304,7 +304,7 @@ function UseState() {
     width: '25vw',
     margin: '15px',
     padding: '15px',
-    borderRadius: '15px'
+    borderRadius: '15px',
   }
 
 
