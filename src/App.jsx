@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
 
 function App() {
@@ -89,6 +89,12 @@ function App() {
 
 
       <UseState></UseState>
+
+
+
+
+
+      <LoadAPIData></LoadAPIData>
 
     </center>
   )
@@ -276,7 +282,7 @@ function eventHandeler1() {
 
 
 
-//// ৬। React JS এ কোনো কিছুর মান যদি Dynamically পরিবর্তন করতে চাই তাহলে আমাদেরকে useState() Method ব্যবহার করতে হবে ।
+//// ৬। React JS এ কোনো কিছুর মান যদি Dynamically পরিবর্তন করা কিনবা দেখাতে চাই তাহলে আমাদেরকে useState() Method ব্যবহার করতে হবে ।
 
 function UseState() {
 
@@ -312,6 +318,36 @@ function UseState() {
       <h1>Number Count : {count}</h1>
       <button onClick={handelPlushCount}>Increase Number</button>
       <button onClick={handelMinusCount}>Decrease Number</button>
+    </section>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+//// ৭। React JS এ Borwser থেকে কোনো Data কিনবা API Load করতে চাই , তাহলে আমাদেরকে useEffect() method ব্যবহার করতে হবে ।
+
+function LoadAPIData() {
+
+  const [API, laodAPI] = useState([]);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(data => laodAPI(data))
+  }, [])
+
+  return (
+    <section>
+      <ul>
+        <ol>Total Users : {API.length}</ol>
+      </ul>
     </section>
   )
 }
