@@ -298,7 +298,6 @@ function UseState() {
 
 
   //Example Of Emplement Style With The Help Of Object Function .
-
   const countStyle = {
     border: '2.5px solid purple',
     width: '25vw',
