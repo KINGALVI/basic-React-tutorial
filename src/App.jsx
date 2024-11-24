@@ -66,13 +66,16 @@ function App() {
       {/* React JS এ map() Method এর ব্যবহার । */}
 
       {
+        // Normal Mapping
+
         // eslint-disable-next-line react/jsx-key
         friends.map(friend => <Friends friends={friend} ></Friends>)
       }
 
       {
-        // eslint-disable-next-line react/jsx-key
-        myPlayers.map(player => <Players players={player}></Players>)
+        // Advance Mapping
+
+        myPlayers.map(player => <Players key={player.id} players={player}></Players>)
       }
 
 
@@ -231,11 +234,11 @@ function Friends({ friends }) {
 
 // 2. Secoend Advance Example 
 const myPlayers = [
-  { Name: 'alvi', age: 21 },
-  { Name: 'jhon', age: 22 },
-  { Name: 'whick', age: 23 },
-  { Name: 'sam', age: 24 },
-  { Name: 'justin', age: 25 }
+  { id: 1, Name: 'alvi', age: 21 },
+  { id: 2, Name: 'jhon', age: 22 },
+  { id: 3, Name: 'whick', age: 23 },
+  { id: 4, Name: 'sam', age: 24 },
+  { id: 5, Name: 'justin', age: 25 }
 ]
 
 function Players({ players }) {
@@ -344,8 +347,7 @@ function LoadAPIData() {
       <h1>Total Users : {API.length}</h1>
 
       {
-        // eslint-disable-next-line react/jsx-key
-        API.map(userData => <UsersData usersData={userData}></UsersData>)
+        API.map(userData => <UsersData key={userData.id} usersData={userData}></UsersData>)
       }
 
       <br /><br />
