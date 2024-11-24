@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
 
-  /* React JS এর ভিতরে একটী Component তৈরি করে তা parant commponent এ দেখানোর নিয়ম । */
+  /* React JS এর ভিতরে একটী Component তৈরি করে তা Parant Commponent এ দেখানোর নিয়ম । */
 
   return (
     <center>
@@ -63,7 +63,7 @@ function App() {
 
 
 
-      {/* React JS এ map() method এর ব্যবহার । */}
+      {/* React JS এ map() Method এর ব্যবহার । */}
 
       {
         // eslint-disable-next-line react/jsx-key
@@ -104,7 +104,7 @@ function App() {
 
 
 
-/* React JS এর ভিতরে একটী Component তৈরি করে তা parant commponent এ দেখানোর নিয়ম । */
+/* React JS এর ভিতরে একটী Component তৈরি করে তা Parant Commponent এ দেখানোর নিয়ম । */
 
 function Person() {
   return (
@@ -219,8 +219,7 @@ function ConditionalRendering({ isDone, Task }) {
 //// ৪। React JS এ map() method এর ব্যবহার ।
 
 
-// 1. frist normal example 
-
+// 1. Frist Normal Example 
 const friends = ['alvi', 'jhon', 'whick', 'sam', 'justin']
 
 function Friends({ friends }) {
@@ -230,8 +229,7 @@ function Friends({ friends }) {
 }
 
 
-// 2. secoend advance example 
-
+// 2. Secoend Advance Example 
 const myPlayers = [
   { Name: 'alvi', age: 21 },
   { Name: 'jhon', age: 22 },
@@ -262,13 +260,11 @@ function Players({ players }) {
 
 
 // 1. Event Hnadel With Parameter .
-
 function eventHandeler2(Number) {
   alert(Number + 5);
 }
 
 // 2. Event Handel Without Parameter .
-
 function eventHandeler1() {
   alert('HELLO KING ALVI !!')
 }
@@ -303,7 +299,7 @@ function UseState() {
   }
 
 
-  //Example Of Emplement Style With The Help Of Object Function .
+  // Example Of Emplement Style With The Help Of Object Function .
   const countStyle = {
     border: '2.5px solid purple',
     width: '25vw',
@@ -344,11 +340,34 @@ function LoadAPIData() {
   }, [])
 
   return (
-    <section>
-      <ul>
-        <ol>Total Users : {API.length}</ol>
-      </ul>
+    <section className='Destructure'>
+      <h1>Total Users : {API.length}</h1>
+
+      {
+        // eslint-disable-next-line react/jsx-key
+        API.map(userData => <UsersData usersData={userData}></UsersData>)
+      }
+
+      <br /><br />
+
     </section>
+  )
+}
+
+
+// Example Of Destructuring API Data Using map() Method .
+function UsersData({ usersData }) {
+
+  const { name, email, phone } = usersData;
+
+  return (
+    <div>
+      <hr />
+      <h3>Users Name :{name}</h3>
+      <h5>1. User Email : {email}</h5>
+      <h5>2. User Phone Number : {phone}</h5>
+      <hr />
+    </div>
   )
 }
 
