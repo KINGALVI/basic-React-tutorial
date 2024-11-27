@@ -40,7 +40,9 @@ function TotalCountryAPI() {
 
 //Destructuring api
 function CountryAPIDetail({ allCountry }) {
-    const { name, region, subregion, capital, flags } = allCountry;
+
+    const { name, region, subregion, capital, flags, population } = allCountry;
+
     return (
         <div>
             <hr />
@@ -50,6 +52,7 @@ function CountryAPIDetail({ allCountry }) {
             <h3>Capital : {capital[0]}</h3>
             <h3>Region : {region}</h3>
             <h3>Region : {subregion}</h3>
+            <h3>Population : {population}</h3>
             <hr />
         </div>
     )
