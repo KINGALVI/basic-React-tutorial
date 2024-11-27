@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import './App.css'
+import ALVI from './ALVI';
 
 function App() {
 
@@ -99,6 +100,12 @@ function App() {
 
       <LoadAPIData></LoadAPIData>
 
+
+
+
+
+      <ALVI></ALVI>
+
     </center>
   )
 }
@@ -127,7 +134,7 @@ function Person() {
 //// ১। React JS এ কোনো Data কে Dynamic ভাবে দেখানোর নিয়ম ।
 
 function Device() {
-  const name = 'Samsumg';
+  const name = 'Samsumg'
   const price = '50000$'
   return (
     <h1> I got a laptop . So the laptop is made by {name} and the laptop pice is {price} . </h1>
