@@ -198,9 +198,7 @@ function ConditionalRendering({ isDone, Task }) {
   //  <li> {isDone || 'Finished : ' } {Task} </li>
 
 
-  // 3. Turnari Operator if else with the use of variable (Let)
-
-
+  // 4. Turnari Operator if else with the use of variable (Let)
 
   // let listItem;
 
