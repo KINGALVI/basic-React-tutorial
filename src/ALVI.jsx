@@ -65,7 +65,10 @@ function CountryAPIDetail({ allCountry, handelVisitedCountrys }) {
             <hr />
 
             <img src={flags.png} alt={flags.alt} />
+
+            {/* example of using conditional css inside html */}
             <h2 style={{ backgroundColor: visited ? 'purple' : 'black' }}>{name.common}</h2>
+
             <h3>Official Name : {name.official}</h3>
             <h3>Capital : {capital[0]}</h3>
             <h3>Region : {region}</h3>
