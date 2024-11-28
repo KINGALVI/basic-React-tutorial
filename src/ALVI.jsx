@@ -22,26 +22,28 @@ function TotalCountryAPI() {
     useEffect(() => {
         fetch('https://restcountries.com/v3.1/independent?status=true')
             .then(responce => responce.json())
-            .then(Data => {
-                console.log(Data)
-                allCountry(Data)
-            })
+            .then(Data => allCountry(Data))
     }, [])
 
-    // const [visitedCountry , setVisitedCountry] = useState([]);
+    const [visitedCountry, setVisitedCountry] = useState([]);
 
-    const handelVisitedCountrys = (countryList) => {
-        alert('alvi', countryList)
+    const handelVisitedCountrys = (country) => {
+        const newvisitedCountry = [...visitedCountry, country];
+        setVisitedCountry(newvisitedCountry);
     }
 
     return (
         <section>
-            <h1>Countrys That I Visited !!</h1>
+            {
+                visitedCountry.length === 0 ? <h1>Whitelist Some Visited Countrys !!</h1> : <h1>{visitedCountry.length} Countrys You Have Been Visited !!</h1>
+            }
             <ul>
-
+                {
+                    visitedCountry.map(country => <ol key={country.cca2}>{country.name.common}</ol>)
+                }
             </ul>
             {
-                country.length > 0 ? country.map(country => <CountryAPIDetail key={country.cca2} handelVisitedCountrys={handelVisitedCountrys} allCountry={country}></CountryAPIDetail>) : <h1> LODING PAGE....</h1>
+                country.length > 0 ? country.map(country => <CountryAPIDetail key={country.cca2} handelVisitedCountrys={() => handelVisitedCountrys(country)} allCountry={country}></CountryAPIDetail>) : <h1> LODING PAGE....</h1>
             }
 
         </section>
@@ -52,6 +54,7 @@ function TotalCountryAPI() {
 function CountryAPIDetail({ allCountry, handelVisitedCountrys }) {
 
     const { name, region, subregion, capital, flags, population } = allCountry;
+    console.log(allCountry)
 
     const [visited, setVisited] = useState(false);
 
