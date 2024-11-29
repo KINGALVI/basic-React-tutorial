@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import './App.css'
-import ALVI from './ALVI';
+import RestCountries from './Rest Countries/RestCountries';
 
 function App() {
 
@@ -104,7 +104,7 @@ function App() {
 
 
 
-      <ALVI></ALVI>
+      <RestCountries></RestCountries>
 
     </center>
   )

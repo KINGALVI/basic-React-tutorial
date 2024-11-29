@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
-import './ALVI.css'
+import './RestCountries.css'
 
-export default function ALVI() {
+export default function RestCountries() {
     return (
         <section>
             <h1>KING ALVI</h1>
