@@ -39,8 +39,7 @@ function TotalCountryAPI() {
         if (savedCountries.length > 0 && country.length > 0) {
 
             // Step 3: Map saved country IDs to full country details
-            const savedCountryDetails = savedCountries
-                .map(cca2 => country.find(whitelistCountry => whitelistCountry.cca2 === cca2))
+            const savedCountryDetails = savedCountries.map(cca2 => country.find(whitelistCountry => whitelistCountry.cca2 === cca2))
                 .filter(Boolean); // Filter out any undefined values
 
             // Step 4: Update state with the full details of visited countries
