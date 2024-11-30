@@ -14,11 +14,11 @@ const getWhitelistCountry = () => {
 // Function to add a new ID to the whitelist country data
 const addWhitelistCountry = id => {
     // Get the current whitelist country data
-    const cart = getWhitelistCountry();
+    const whitelistCountry = getWhitelistCountry();
     // Add the new ID to the cart array
-    cart.push(id);
+    whitelistCountry.push(id);
     // Save the updated cart array back to local storage
-    saveWhitelistCountry(cart);
+    saveWhitelistCountry(whitelistCountry);
 }
 
 // Function to save the whitelist country data to local storage
@@ -29,4 +29,14 @@ const saveWhitelistCountry = cart => {
     localStorage.setItem('cart', whitelistCountry);
 }
 
-export { addWhitelistCountry, getWhitelistCountry };
+// Function to remove an ID from the whitelist country data
+const removeWhitelistCountry = id => {
+    // Retrieve the current whitelist country data
+    const whitelistCountry = getWhitelistCountry();
+    // Filter out the country with the specified id
+    const updatedWhitelistCountry = whitelistCountry.filter(idx => idx !== id);
+    // Save the updated cart array back to local storage
+    saveWhitelistCountry(updatedWhitelistCountry);
+}
+
+export { addWhitelistCountry, getWhitelistCountry, removeWhitelistCountry };
