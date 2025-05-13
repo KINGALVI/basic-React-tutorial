@@ -10,7 +10,7 @@ Welcome to **Basic React Tutorial**, a structured project designed to help you u
 
 - **React JS** – Component-based UI development
 - **JavaScript (ES6+)** – Modern syntax for dynamic interactions
-- **CSS** – Styling components for a polished UI
+- **CSS** – Styling components for a polished UI 
 
 ---
 
