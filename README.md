@@ -22,7 +22,7 @@ Welcome to **Basic React Tutorial**, a structured project designed to help you u
 
 ---
 
-## 🚀 **How to Get Started**
+## 🎯 **How to Use - Clone the repository**
 
 1. **Clone the Repository**
 
